@@ -1,0 +1,8 @@
+Image==1.5.33
+plotly==5.6.0
+pandas==1.4.2
+inflection==0.5.1
+streamlit==1.20.0
+streamlit_folium==0.11.1
+folium==0.14.0
+millify==0.1.1

@@ -22,8 +22,6 @@ def average_cost_for_two_countries(df):
     #selecionar colunas
     cols = ['average_cost_for_two', 'country_name']
 
-    #agrupar linhas por data
-    #.sort_values('restaurant_id', ascending=False)
     dfaux = round(df.loc[:, cols].groupby(['country_name']).mean().sort_values('average_cost_for_two', ascending=False).reset_index(), 2)
     
     #desenhar o gráfico de barra
@@ -44,8 +42,6 @@ def mean_votes_countries(df):
     #selecionar colunas
     cols = ['votes', 'country_name']
 
-    #agrupar linhas por data
-    #.sort_values('restaurant_id', ascending=False)
     dfaux = round(df.loc[:, cols].groupby(['country_name']).mean().sort_values('votes', ascending=False).reset_index(), 2)
     
     #desenhar o gráfico de barra
@@ -65,8 +61,6 @@ def cities_countries(df):
     #selecionar colunas
     cols =  ['city', 'country_name']
 
-    #agrupar linhas por data
-    #.sort_values('restaurant_id', ascending=False)
     dfaux = df.loc[:, cols].groupby(['country_name']).nunique().sort_values('city', ascending=False).reset_index()
     
     #desenhar o gráfico de barra
@@ -86,8 +80,6 @@ def restaurant_countries(df):
     #selecionar colunas
     cols =  ['restaurant_id', 'country_name']
 
-    #agrupar linhas por data
-    #.sort_values('restaurant_id', ascending=False)
     dfaux = df.loc[:, cols].groupby(['country_name']).count().sort_values('restaurant_id', ascending=False).reset_index()
     
     #desenhar o gráfico de barra
